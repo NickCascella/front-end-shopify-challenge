@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.scss";
+import OpenAIForm from "./components/OpenAIForm/OpenAIForm";
+import RenderResponses from "./components/RenderResponses/RenderResponses";
 
-function App() {
+const App = () => {
+  const [responses, setResponses] = useState([
+    {
+      prompt: "This is where your prompts will show!",
+      completionAnswer: "This is an example response!",
+    },
+  ]);
+
+  useEffect(() => {
+    const previousPrompts = sessionStorage.getItem("OpenAIFormData");
+    if (previousPrompts) {
+      const parsedPreviousPrompts = JSON.parse(previousPrompts);
+      console.log(parsedPreviousPrompts);
+      setResponses(parsedPreviousPrompts.oldResponses);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app__header">
+        <h1 className="app__title">Fun with GPT-3</h1>
+        <OpenAIForm setResponses={setResponses} responses={responses} />
+      </div>
+      <RenderResponses responses={responses} />
     </div>
   );
-}
+};
 
 export default App;

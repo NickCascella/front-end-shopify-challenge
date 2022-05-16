@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../assets/fonts/NunitoSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../assets/fonts/NunitoSans-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../assets/fonts/NunitoSans-Bold.ttf");
+  font-weight: 700;
+}
+
+$font-stack-orbitron: "Orbitron";
+$font-stack-nunito-sans: "NunitoSans";

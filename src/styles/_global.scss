@@ -1,0 +1,12 @@
+@use "./typography" as *;
+
+body,
+textarea {
+  font-family: $font-stack-nunito-sans;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-stack-orbitron;
+}
