@@ -36,17 +36,13 @@ const OpenAIForm = ({ setResponses, responses }) => {
       return setErr("Prompt must be at least 5 characters");
 
     let oldResponses = [...responses];
-    // oldResponses.unshift({
-    //   prompt: prompt,
-    //   completionAnswer: `${
-    //     Math.random() * 100
-    //   } hello world how are you today this is the story of some rnadom things and whatevers`,
-    // });
-    sessionStorage.setItem("OpenAIFormData", JSON.stringify({ oldResponses }));
+
     oldResponses.unshift({
       prompt,
       completionAnswer,
     });
+    sessionStorage.setItem("OpenAIFormData", JSON.stringify({ oldResponses }));
+
     setResponses(oldResponses);
     setPrompt("");
   };
