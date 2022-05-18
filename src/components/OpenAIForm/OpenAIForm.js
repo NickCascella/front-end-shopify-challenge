@@ -42,7 +42,6 @@ const OpenAIForm = ({ setResponses, responses }) => {
       completionAnswer,
     });
     localStorage.setItem("OpenAIFormData", JSON.stringify({ oldResponses }));
-
     setResponses(oldResponses);
     setPrompt("");
   };
@@ -57,15 +56,7 @@ const OpenAIForm = ({ setResponses, responses }) => {
         placeholder="Type something for the engine!"
       />
       <h2>Select an engine</h2>
-      <Select
-        value={engine}
-        onChange={(e) => setEngine(e.target.value)}
-        sx={{
-          ":focus": {
-            outlineColor: "rgb(139, 205, 220)",
-          },
-        }}
-      >
+      <Select value={engine} onChange={(e) => setEngine(e.target.value)}>
         {engines.map((engine) => (
           <MenuItem key={engine.name} value={engine.value}>
             {engine.name}
