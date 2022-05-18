@@ -1,6 +1,6 @@
 # Fun with GPT-3
 
-Front-end developer shopify challenge for the fall 2022 internship program.
+Front-end developer Shopify challenge for the fall 2022 internship program.
 
 ## Authors
 
