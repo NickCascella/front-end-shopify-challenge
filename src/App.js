@@ -12,10 +12,9 @@ const App = () => {
   ]);
 
   useEffect(() => {
-    const previousPrompts = sessionStorage.getItem("OpenAIFormData");
+    const previousPrompts = localStorage.getItem("OpenAIFormData");
     if (previousPrompts) {
       const parsedPreviousPrompts = JSON.parse(previousPrompts);
-      console.log(parsedPreviousPrompts);
       setResponses(parsedPreviousPrompts.oldResponses);
     }
   }, []);

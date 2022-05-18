@@ -41,7 +41,7 @@ const OpenAIForm = ({ setResponses, responses }) => {
       prompt,
       completionAnswer,
     });
-    sessionStorage.setItem("OpenAIFormData", JSON.stringify({ oldResponses }));
+    localStorage.setItem("OpenAIFormData", JSON.stringify({ oldResponses }));
 
     setResponses(oldResponses);
     setPrompt("");
